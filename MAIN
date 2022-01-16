@@ -1,0 +1,127 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local UI = Material.Load({
+     Title = "RoHub(Strucid)", 
+     Style = 1,
+     SizeX = 350, -- Size in X
+     SizeY = 400,  -- Size in Y
+     Theme = "Dark", -- There are 5 Styles, Aqua, Mocha, Jester, Dark, Light
+     ColorOverrides = {
+        MainFrame = Color3.fromRGB(35, 35, 35)
+    }
+})
+
+-- pages.
+
+local Page = UI.New({
+    Title = "Aim" 
+})
+
+local Page2 = UI.New({
+    Title = "ESP"
+})
+local Page3 = UI.New({
+    Title = "Extra"
+})
+local Page4 = UI.New({
+    Title = "Credits"
+})
+
+-- Scripts
+Page.Button({
+    Text = "Silent aim",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ICEEDev/Epic-Roblox-Scripts/master/StrucidSilentAim.lua", true))()
+    end
+
+})
+
+Page2.Button({
+    Text = "Tracers",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/trace/main/lua", true))()
+    end
+
+})
+Page3.Button({
+    Text = "Rejoin on vote kick",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/SECRTE/main/ff", true))()
+    end
+})
+Page2.Button({
+    Text = "Box ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/SKELEESP/main/SPOOKY", true))()
+    end
+})
+Page3.Button({
+    Text = "No recoil/No spread (Buggy)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/recoil/main/fg", true))()
+    end
+})
+
+
+
+Page3.Button({
+    Text = "Inf jump (STILL TAKE FALL DAMAGE)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/INF/main/jump", true))()
+        
+    end
+})
+
+Page2.Button({
+    Text = "SOON",
+    Callback = function()
+        
+    end
+})
+
+
+
+
+
+Page3.Button({
+    Text = "AirStuck (Press 3 dots for info)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHexry/air/main/air", true))()
+    end,
+    Menu = {
+        Information = function(self)
+            UI.Banner({
+                Text = "Airstuck or AirWalk. Press Left CTRL to stay in place, Space is to go up."           
+            })
+        end
+    }
+})
+Page4.Button({
+    Text = "RoHub info (Press 3 dots)",
+    Callback = function()
+        
+    end,
+    Menu = {
+        Information = function(self)
+            UI.Banner({
+                Text = "RoHub was First started in june 2021, We started out as a channel that reviewed scripts and executors, We then decided to make our own executor (that wasnt very good) So we switched to making scripts for games, and were working on a new executor thats gonna be better than ever! for script updates please join our discord!"           
+            })
+        end
+    }
+})
+Page4.Button({
+    Text = "Owner/Scripter: Dev_Hexry#1219",
+    Callback = function()
+        
+    end
+})
+Page4.Button({
+    Text = "Ui: Unkown",
+    Callback = function()
+    end
+})
+Page4.Button({
+    Text = "https://discord.gg/VwrjBGM8dT",
+    Callback = function()
+    end
+})
